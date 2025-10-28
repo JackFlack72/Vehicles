@@ -1,19 +1,32 @@
 package com.pluralsight;
 
+import java.util.ArrayList;
+
 public class Vehicle {
     private String color;
     private int numberOfPassengers;
     private int cargoCapacity;
     private int fuelCapacity;
+    private ArrayList<Wheel> wheels = new ArrayList<>();
 
     public static void main(String[] args) {
         Moped slowRide = new Moped();
-        slowRide.setColor("Red");
+        slowRide.setColor("Blue");
+        slowRide.setNumberOfPassengers(1);
+        slowRide.setCargoCapacity(2);
         slowRide.setFuelCapacity(5);
 
         Car fastRide = new Car();
-        fastRide.setColor("Blue");
-        fastRide.setFuelCapacity(35);
+        fastRide.setColor("Red");
+        fastRide.setNumberOfPassengers(2);
+        fastRide.setCargoCapacity(10);
+        fastRide.setFuelCapacity(30);
+
+        SemiTruck bigRide = new SemiTruck();
+        bigRide.setColor("Red");
+        bigRide.setNumberOfPassengers(2);
+        bigRide.setCargoCapacity(100);
+        bigRide.setFuelCapacity(300);
     }
 
     public String getColor() {
