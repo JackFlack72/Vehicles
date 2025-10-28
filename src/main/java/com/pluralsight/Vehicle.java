@@ -9,26 +9,6 @@ public class Vehicle {
     private int fuelCapacity;
     private ArrayList<Wheel> wheels = new ArrayList<>();
 
-    public static void main(String[] args) {
-        Moped slowRide = new Moped();
-        slowRide.setColor("Blue");
-        slowRide.setNumberOfPassengers(1);
-        slowRide.setCargoCapacity(2);
-        slowRide.setFuelCapacity(5);
-
-        Car fastRide = new Car();
-        fastRide.setColor("Red");
-        fastRide.setNumberOfPassengers(2);
-        fastRide.setCargoCapacity(10);
-        fastRide.setFuelCapacity(30);
-
-        SemiTruck bigRide = new SemiTruck();
-        bigRide.setColor("Red");
-        bigRide.setNumberOfPassengers(2);
-        bigRide.setCargoCapacity(100);
-        bigRide.setFuelCapacity(300);
-    }
-
     public String getColor() {
         return color;
     }
@@ -59,5 +39,17 @@ public class Vehicle {
 
     public void setFuelCapacity(int fuelCapacity) {
         this.fuelCapacity = fuelCapacity;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Vehicle{");
+        sb.append("color='").append(color).append('\'');
+        sb.append(", numberOfPassengers=").append(numberOfPassengers);
+        sb.append(", cargoCapacity=").append(cargoCapacity);
+        sb.append(", fuelCapacity=").append(fuelCapacity);
+        sb.append(", wheels=").append(wheels);
+        sb.append('}');
+        return sb.toString();
     }
 }
